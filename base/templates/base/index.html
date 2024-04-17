@@ -1,0 +1,46 @@
+{% load static %}
+{%load socialaccount%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'base/main.css' %}">
+</head>
+<body>
+    <nav>
+        <div class="navDiv" >
+            <li><a class="navA" href="{% url 'home'%}" > Home</a></li>
+            <li><a class="navA" href="{% url 'topics'%}"> Topics</a></li>
+            <li><a class="navA" href="{% url 'about'%}"> about</a></li>
+        </div>
+        <div class="navDiv" >
+            <li><a class="navA" > Profile</a></li>
+            {%if not request.user.is_authenticated%}
+            <li><a class="navA" href="{%provider_login_url 'github'%}"> Login</a></li>
+            {%else%}
+            <li><a class="navA" href="{%url 'account_logout'%}"> Logout</a></li>
+            {%endif%}
+        </div>
+    </nav>
+    <div class="bodyDiv" >
+        <div>
+            {%block content%} {%endblock content%}
+        </div>
+        
+    </div>
+
+    <footer>
+        <div>
+            <div class="footer"><a class="footerA" >&copy;All rights reserved. </a></div>            
+        </div>
+        <div class="socialLinks">
+            <li><a class="footerA" > Linkedin</a></li>
+            <li><a class="footerA" > Github</a></li>
+            <li><a class="footerA" > Leetcode</a></li>
+        </div>
+
+    </footer>
+</body>
+</html>
