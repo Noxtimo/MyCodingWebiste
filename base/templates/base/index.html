@@ -19,7 +19,7 @@
         <li><a class="navA" href="{% url 'about'%}"> about</a></li>
       </div>
       <div class="navDiv">
-        <li><a class="navA"> Profile</a></li>
+        <li><a class="navA" href="{%url 'subscribe'%}" > Subscribe</a></li>
         {%if not request.user.is_authenticated%}
         <li>
           <a class="navA" href="{% url 'social_providers_page'%}"> Login</a>

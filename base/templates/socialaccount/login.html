@@ -5,6 +5,10 @@
     {% trans "Sign In" %}
 {% endblock head_title %}
 {% block content %}
+<div class="loginDiv" >
+    <div class="divWithinLoginDiv" >
+        <div class="youAreAboutToLoginDiv">
+
     {% if process == "connect" %}
         {% element h1 %}
             {% blocktrans with provider.name as provider %}Connect {{ provider }}{% endblocktrans %}
@@ -20,10 +24,17 @@
             {% blocktrans with provider.name as provider %}You are about to sign in using a third-party account from {{ provider }}.{% endblocktrans %}
         </p>
     {% endif %}
+    </div>
     {% element form method="post" no_visible_fields=True %}
         {% slot actions %}
             {% csrf_token %}
-            <button class="button">Submit</button>
+            <div class="confirmOrCancelDiv" >
+               <button class="button acceptButton">Submit</button>
+               <a href="{%url 'social_providers_page'%}" class="button cancelButton">Cancel</a>  
+            </div>
+            
         {% endslot %}
     {% endelement %}
+    </div>
+</div>
 {% endblock content %}
