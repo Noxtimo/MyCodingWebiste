@@ -542,3 +542,55 @@ hr {
     font-weight: 400;
     font-size: 20px;
 }
+
+
+.ArraysAndDateStructures {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.ArraysAndDateStructures a {
+    width: 80%;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    border: 3px solid purple;
+    transition: 0.3s;
+
+
+}
+
+.ArraysAndDateStructures a:hover {
+    background-color: purple;
+    box-shadow: 5px 5px 5px 5px gray;
+}
+
+.ArraysAndDateStructures a h6 {
+    color: black;
+}
+
+.ArraysAndDateStructuresDifficulty {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.ArraysAndDateStructuresDifficulty div {
+    width: 80%;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    margin: 0px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
