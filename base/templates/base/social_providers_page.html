@@ -19,7 +19,6 @@
         <li><a class="navA" href="{% url 'about'%}"> about</a></li>
       </div>
       <div class="navDiv">
-        <li><a class="navA"> Profile</a></li>
         {%if not request.user.is_authenticated%}
         <li>
           <a class="navA" href="{% url 'social_providers_page'%}"> Login</a>
@@ -47,18 +46,11 @@
 <hr>
     <footer>
       <div>
-        <a class="footerA" href="#" >Home</a>
-        <a class="footerA" href="#" >Home</a>
-        <a class="footerA" href="#" >Home</a>
-        <a class="footerA" href="#" >Home</a>
-        
-      </div>
-      <div>
       </div>
       <div class="socialLinks">
         <li><a class="footerA" href="#" > Linkedin</a></li>
-        <li><a class="footerA" href="#" > Github</a></li>
-        <li><a class="footerA" href="#" > Leetcode</a></li>
+        <li><a class="footerA" href="https://github.com/Noxtimo" > Github</a></li>
+        <li><a class="footerA" href="https://leetcode.com/NOxti/" > Leetcode</a></li>
       </div>
       <div class="footer">
         <a class="footerA">&copy;All rights reserved. </a>

@@ -95,6 +95,8 @@ a {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     height: 90;
 
 
@@ -211,6 +213,7 @@ h3 {
 }
 
 .firstDivHome {
+    width: 100%;
     background-color: white;
     display: flex;
     flex-wrap: wrap;
@@ -285,8 +288,10 @@ h6 {
     box-shadow: 10px 10px 10px 10px lightgray;
     border-radius: 5px;
     display: flex;
+    flex-wrap: wrap;
     padding: 10px;
     height: 400px;
+    padding: 10px;
 }
 
 .progressHome div {
@@ -351,7 +356,7 @@ hr {
     border: 3px solid black;
     border-radius: 5px;
     background-color: white;
-    width: 30%;
+    width: 100%;
     height: 300px;
     display: flex;
     flex-direction: column;
@@ -360,6 +365,7 @@ hr {
     align-items: center;
     padding: 10px;
     box-shadow: 10px 10px rgb(63, 6, 63);
+
 }
 
 .confirmOrCancelDiv {
@@ -402,158 +408,21 @@ hr {
 }
 
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.pricing {
-    margin-top: 50px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.pricing-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 20px;
-    width: 100%;
-    border-radius: 5px;
-    box-shadow: 0 8px 16px 0px rgba(0, 0, 0, 0.1);
-    margin-left: 50px;
-}
-
-.pricing-card-heading {
-    padding: 10px;
-    font-size: 20px;
-    line-height: 24px;
-    font-weight: 400;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.pricing-card-heading-free {
-    background-color: #f8fafe;
-    color: #000;
-}
-
-.pricing-card-heading-lite {
-    background: linear-gradient(90deg,
-            rgba(194, 209, 255, 1) 0%,
-            rgba(179, 114, 254, 1) 100%);
-    color: #fff;
-}
-
-.pricing-card-heading-pro {
-    background: linear-gradient(90deg,
-            rgba(255, 177, 195, 1) 0%,
-            rgba(255, 203, 112, 1) 100%);
-    color: #fff;
-}
-
-.pricing-card-list {
-    list-style-type: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 20px;
-}
-
-.pricing-card-list-item {
-    position: relative;
-}
-
-.icon-yes::before {
-    position: absolute;
-    left: -30px;
-    top: -5px;
-    display: inline-block;
-    content: "";
-    width: 20px;
-    height: 25px;
-    background: url("https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/png/check-4x.png") no-repeat;
-    background-size: 15px;
-    background-position: bottom center;
-    filter: invert(75%) sepia(27%) saturate(459%) hue-rotate(76deg) brightness(90%) contrast(88%);
-}
-
-.icon-no::before {
-    position: absolute;
-    left: -27px;
-    top: -5px;
-    display: inline-block;
-    content: "";
-    width: 20px;
-    height: 25px;
-    background: url("https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/png/plus-4x.png") no-repeat;
-    background-size: 15px;
-    background-position: bottom center;
-    filter: invert(45%) sepia(88%) saturate(908%) hue-rotate(312deg) brightness(90%) contrast(86%);
-    transform: rotate(45deg);
-}
-
-.icon-no {
-    color: #999;
-    text-decoration: line-through;
-}
-
-.pricing-card-btn {
-    width: 70%;
-    text-align: center;
-    font-size: 16px;
-    padding: 15px;
-    margin-left: 7.5%;
-    border: 1px solid #27264b;
-    border-radius: 5px;
-    background-color: #fff;
-    color: #27264b;
-    cursor: pointer;
-    text-transform: uppercase;
-    transition: background-color 250ms ease-in-out;
-}
-
-.pricing-card-btn:hover {
-    background-color: rgb(228, 228, 240);
-}
-
-.pricing-card-highlight .pricing-card-btn {
-    border: none;
-    color: #fff;
-    background-color: #27264b;
-}
-
-.pricing-card-highlight .pricing-card-btn:hover {
-    background-color: #9390db;
-}
-
-.pricing-card-price {
-    text-align: center;
-    font-size: 28px;
-    line-height: 28px;
-    font-weight: 500;
-    margin-bottom: 15px;
-}
-
-.pricing-card-price-text {
-    font-weight: 400;
-    font-size: 20px;
-}
 
 
 .ArraysAndDateStructures {
-    width: 100%;
+    width: 83%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    border: 3px solid purple;
+    box-shadow: 5px 5px 5px 5px grey;
+    margin-top: 0px;
 }
 
 .ArraysAndDateStructures a {
-    width: 80%;
+    width: 100%;
     background-color: white;
     display: flex;
     justify-content: space-between;
@@ -582,10 +451,12 @@ hr {
     justify-content: center;
     align-items: center;
     margin-top: 20px;
+    margin-bottom: 0px;
+    padding: 5px;
 }
 
 .ArraysAndDateStructuresDifficulty div {
-    width: 80%;
+    width: 83%;
     background-color: white;
     display: flex;
     justify-content: space-between;
@@ -593,4 +464,17 @@ hr {
     margin: 0px;
     border-radius: 5px;
     transition: 0.3s;
+}
+
+
+.easy {
+    color: green !important;
+}
+
+.hard {
+    color: red !important;
+}
+
+.medium {
+    color: orange !important;
 }

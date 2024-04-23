@@ -23,5 +23,4 @@ urlpatterns = [
     path('topics/tries/', views.tries, name='tries'),
     path('topics/trees/', views.trees, name='trees'),
     path('social_providers_page/', views.social_providers_page, name='social_providers_page'),
-    path('subscribe/', views.subscribe, name='subscribe'),
 ]

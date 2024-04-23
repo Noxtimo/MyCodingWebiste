@@ -1,9 +1,12 @@
-{% extends "account/base_manage.html" %}
+{% extends "base/index.html" %}
 {% load allauth i18n %}
 {% block head_title %}
     {% trans "Sign Out" %}
 {% endblock head_title %}
 {% block content %}
+<div class="loginDiv" >
+    <div class="divWithinLoginDiv" >
+        <div class="youAreAboutToLoginDiv">
     {% element h1 %}
         {% trans "Sign Out" %}
     {% endelement %}
@@ -18,10 +21,14 @@
                        value="{{ redirect_field_value }}" />
             {% endif %}
         {% endslot %}
+        </div>
         {% slot actions %}
-            {% element button type="submit" %}
-                {% trans 'Sign Out' %}
-            {% endelement %}
+        <div class="confirmOrCancelDiv" >
+            <button class="button acceptButton">Submit</button>
+            <a href="{%url 'social_providers_page'%}" class="button cancelButton">Cancel</a>  
+         </div>
         {% endslot %}
     {% endelement %}
+    </div>
+    </div>
 {% endblock content %}
